@@ -1,10 +1,16 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Login } from './pages/login/Login'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <h1>Vite app works</h1>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Login/>}></Route>
+        </Routes>
+      </Router>
     </>
   )
 }
